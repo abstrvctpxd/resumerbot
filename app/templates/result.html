@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}Result - ResumerBot{% endblock %}
+
+{% block content %}
+  <h1>Generated Output</h1>
+  <pre>{{ text }}</pre>
+  <a href="{{ url_for('index') }}">Back</a>
+{% endblock %}

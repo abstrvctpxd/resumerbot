@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - ResumerBot{% endblock %}
+
+{% block content %}
+  <h1>Welcome to ResumerBot</h1>
+  <p>Paste your resume or job description below and click Generate.</p>
+
+  <form method="post" action="#">
+    <label for="text">Text</label>
+    <textarea id="text" name="text" rows="10" cols="60" placeholder="Paste here..."></textarea>
+    <br>
+    <button type="submit">Generate</button>
+  </form>
+{% endblock %}
