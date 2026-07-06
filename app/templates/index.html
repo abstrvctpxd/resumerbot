@@ -1,15 +1,22 @@
 {% extends 'base.html' %}
 
-{% block title %}Home - ResumerBot{% endblock %}
+{% block title %}Generate Job Proposal - ResumerBot{% endblock %}
 
 {% block content %}
-  <h1>Welcome to ResumerBot</h1>
-  <p>Paste your resume or job description below and click Generate.</p>
+  <h1>Job Proposal Generator</h1>
+  <p>Paste a job posting and we'll generate a professional proposal for you.</p>
 
   <form method="post" action="#">
-    <label for="text">Text</label>
-    <textarea id="text" name="text" rows="10" cols="60" placeholder="Paste here..."></textarea>
-    <br>
-    <button type="submit">Generate</button>
+    <div class="form-group">
+      <label for="job_posting">Job Posting</label>
+      <textarea id="job_posting" name="job_posting" rows="12" placeholder="Paste the job posting here..." required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="owner_email">Project Owner Email</label>
+      <input type="email" id="owner_email" name="owner_email" placeholder="owner@example.com" required>
+    </div>
+
+    <button type="submit">Generate Proposal</button>
   </form>
 {% endblock %}
